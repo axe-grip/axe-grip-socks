@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="AXE Grip Socks — grip, control and confidence for every game.">
+  <title>AXE Grip Socks | Built for Grip</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="announcement">EU SHIPPING · €12.95 PER PAIR</div>
+  <header class="site-header">
+    <a class="wordmark" href="#" aria-label="AXE home">AXE<span>.</span></a>
+    <nav><a href="#shop">SHOP</a><a href="#about">ABOUT</a><a href="#contact">CONTACT</a></nav>
+    <button class="cart-toggle" id="cartToggle" aria-label="Open shopping bag">BAG <span id="cartCount">0</span></button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">MADE FOR YOUR NEXT MOVE</p>
+        <h1>BUILT FOR<br><span>GRIP.</span></h1>
+        <p class="hero-text">More control. More confidence. Every step of the game.</p>
+        <a class="button button-light" href="#shop">SHOP THE COLLECTION <b>↗</b></a>
+      </div>
+      <div class="hero-art" aria-label="AXE grip socks brand graphic">
+        <div class="hero-circle"></div>
+        <div class="hero-mark">A<span>X</span>E</div>
+        <div class="hero-caption">CONTROL YOUR GAME / 001</div>
+      </div>
+    </section>
+
+    <section class="ticker" aria-label="Brand message"><span>GRIP</span> · CONTROL · CONFIDENCE · <span>GRIP</span> · CONTROL · CONFIDENCE ·</section>
+
+    <section class="shop section" id="shop">
+      <div class="section-heading">
+        <div><p class="eyebrow">THE FIRST DROP</p><h2>FIND YOUR<br>COLOUR.</h2></div>
+        <p class="section-note">Eight colourways. One standard.<br>€12.95 per pair.</p>
+      </div>
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <section class="manifesto" id="about">
+      <p class="eyebrow">THE AXE STANDARD</p>
+      <h2>LOCK IN.<br><span>PLAY FREE.</span></h2>
+      <p>AXE is built around one thing: helping players feel confident in every movement. Choose your colour, find your size and get ready for the next game.</p>
+      <a href="https://www.instagram.com/axe_grip_socks/" target="_blank" rel="noopener" class="text-link">FOLLOW @AXE_GRIP_SOCKS ↗</a>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <a class="wordmark footer-mark" href="#">AXE<span>.</span></a>
+    <div><p class="eyebrow">GET IN TOUCH</p><a href="https://www.instagram.com/axe_grip_socks/" target="_blank" rel="noopener">@axe_grip_socks ↗</a></div>
+    <small>© <span id="year"></span> AXE GRIP SOCKS. ALL RIGHTS RESERVED.</small>
+  </footer>
+
+  <div class="cart-backdrop" id="cartBackdrop"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping bag" aria-hidden="true">
+    <div class="cart-head"><h2>YOUR BAG</h2><button id="closeCart" aria-label="Close bag">✕</button></div>
+    <div id="cartItems" class="cart-items"><p class="empty">Your bag is empty.</p></div>
+    <div class="cart-bottom">
+      <div class="subtotal"><span>SUBTOTAL</span><strong id="subtotal">€0.00</strong></div>
+      <p class="shipping-note">EU shipping costs are confirmed at checkout.</p>
+      <button id="checkoutBtn" class="button button-dark full" disabled>CHECKOUT <b>↗</b></button>
+      <small>Secure card checkout is handled by Stripe.</small>
+    </div>
+  </aside>
+
+  <div class="modal-backdrop" id="modalBackdrop">
+    <section class="size-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="closeModal" aria-label="Close">✕</button>
+      <p class="eyebrow">THE FIRST DROP</p>
+      <h2 id="modalTitle">CHOOSE YOUR SIZE</h2>
+      <p id="modalColour" class="modal-colour"></p>
+      <div class="size-options">
+        <button data-size="M">MEDIUM</button><button data-size="L">LARGE</button><button data-size="XL">XL</button>
+      </div>
+      <p id="stockMessage" class="stock-message">Select a size to see availability.</p>
+      <button id="addToBag" class="button button-dark full" disabled>ADD TO BAG — €12.95</button>
+    </section>
+  </div>
+  <script src="/app.js"></script>
+</body>
+</html>
